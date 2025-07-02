@@ -1,8 +1,3 @@
-    Absolutely! Here's a clean, polished, and **complete `README.md`** tailored for your current Terraform project:
-
-    ---
-
-    ```markdown
     # Terraform AWS VPC Infrastructure
 
     ![AWS VPC Architecture](image.png)
@@ -98,4 +93,3 @@
 
     This will remove all infrastructure created by Terraform for this project.
 
-    ---
