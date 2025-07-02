@@ -24,7 +24,7 @@ This Terraform project provisions a fully functional AWS Virtual Private Cloud (
 
 1. **Clone the Repository:**
 ```bash
-git clone https://github.com/your-repo/terraform-aws-vpc.git
+git clone https://github.com/SHIVANIUM-GIT/terraform_vpc.git
 cd terraform-aws-vpc
 ````
 
