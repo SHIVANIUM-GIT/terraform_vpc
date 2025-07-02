@@ -53,6 +53,10 @@ resource "aws_route_table" "pub" {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_nat_gateway.nat.id
   }
+  route {
+    cidr_block = var.cidr_block
+    gateway_id = "local"
+  }
 
   tags = {
     Name = "${var.project_name}-rt-pub"
@@ -82,7 +86,6 @@ resource "aws_subnet" "private" {
 }
 
 # private route table 
-
 resource "aws_route_table" "private_subnet" {
   count = length(var.azs)
   vpc_id = aws_vpc.vpc.id
@@ -90,6 +93,10 @@ resource "aws_route_table" "private_subnet" {
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_nat_gateway.nat.id
+  }
+   route {
+    cidr_block = var.cidr_block
+    gateway_id = "local"
   }
 
   tags = {
